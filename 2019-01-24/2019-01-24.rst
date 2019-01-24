@@ -5,6 +5,8 @@
 Rnode 版本
 ###########
 
+测试通过zoom 参加：https://zoom.us/j/8526821974
+
 今天版本 RChain Node 0.8.3 (7ec0abc6d291182c55e3f9639a0b864878e4728f)
 
 你可以选择二进制文件运行或者docker镜像运行
