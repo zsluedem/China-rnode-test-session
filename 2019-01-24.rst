@@ -1,0 +1,24 @@
+******
+测试介绍
+******
+
+Rnode 版本
+#####
+
+今天版本 RChain Node 0.8.3 (7ec0abc6d291182c55e3f9639a0b864878e4728f)
+
+你可以选择二进制文件运行或者docker镜像运行
+
+* 二进制文件下载地址: https://build.rchain-dev.tk/release/v0.8.3/
+
+* docker 镜像:
+
+    rchain/rnode:master
+
+
+测试内容
+#####
+
+1. 启动节点，连接到bootstrap节点
+2. 观察节点日志，并且接受区块，展示区块
+3. 验证节点可以自己部署合约并且出块
