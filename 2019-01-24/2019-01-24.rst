@@ -30,3 +30,21 @@ Rnode 版本
 1. 启动节点，连接到bootstrap节点
 2. 观察节点日志，并且接受区块，展示区块
 3. 验证节点可以自己部署合约并且出块
+
+
+启动节点
+********
+    rnode://c98ec3cc05e023ac06186b2dcdde16193fbc6a2a@183.45.155.243?protocol=40400&discovery=40404
+
+选择你的私钥和公钥
+************************
+请在下面文件随便选择一个私钥和公钥作为自己的key
+
+`已经bonded 的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8
+/bonded_key_pairs.csv>`_
+
+`未bonded的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/unbonded_key_pair
+.csv>`_
+
+如果你以已经Bonded的key启动节点，那么你的节点就可以部署合约并且出块。如果你使用未bonded的key启动节点，那么你的节点就只是一个只读节点，只能接收别人出的块。
+你还可以使用自己生成的key。
