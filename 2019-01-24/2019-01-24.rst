@@ -15,8 +15,10 @@ Rnode 版本
 
     rchain/rnode:master
 
-`Rnode使用说明下载 <https://github.com/zsluedem/China-rnode-test-session/raw/master/RChain%E8%8A%82%E7%82%B9%E6%B5%8B%E8%AF
+`中文版Rnode使用说明下载 <https://github.com/zsluedem/China-rnode-test-session/raw/master/RChain%E8%8A%82%E7%82%B9%E6%B5%8B%E8%AF
 %95%E6%8C%87%E5%AF%BC.pdf>`_
+
+`英文版Rnode使用说明 <https://rchain.atlassian.net/wiki/spaces/CORE/pages/428376065/User+guide+for+running+RNode>`_
 
 **强烈建议参加测试前先通读使用说明!!!!**
 
