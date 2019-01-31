@@ -1,0 +1,93 @@
+***********************
+2019-01-31 测试介绍
+***********************
+
+ 
+Rnode 版本
+###########
+
+测试通过zoom 参加：https://zoom.us/j/8526821974
+
+今天版本 RChain Node 0.8.3 (7ec0abc6d291182c55e3f9639a0b864878e4728f) **版本必须一致** 判定运行rnode版本_
+
+你可以选择二进制文件运行或者docker镜像运行
+
+* 二进制文件下载地址: https://build.rchain-dev.tk/release/v0.8.3/
+
+* docker 镜像:
+
+    rchain/rnode:master
+
+`中文版Rnode使用说明下载 <https://github.com/zsluedem/China-rnode-test-session/raw/master/RChain%E8%8A%82%E7%82%B9%E6%B5%8B%E8%AF
+%95%E6%8C%87%E5%AF%BC.pdf>`_
+
+`英文版Rnode使用说明 <https://rchain.atlassian.net/wiki/spaces/CORE/pages/428376065/User+guide+for+running+RNode>`_
+
+**强烈建议参加测试前先通读使用说明!!!!**
+
+测试内容
+########
+
+1. 启动节点，连接到bootstrap节点
+2. 观察节点日志，并且接受区块，展示区块
+3. 验证节点可以自己部署合约并且出块
+
+
+bootstrap节点地址
+*****************
+    rnode://c98ec3cc05e023ac06186b2dcdde16193fbc6a2a@183.45.155.243?protocol=40400&discovery=40404
+
+选择你的私钥和公钥
+************************
+请在下面文件随便选择一个私钥和公钥作为自己的key
+
+`已经bonded 的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8
+/bonded_key_pairs.csv>`_
+
+`未bonded的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/unbonded_key_pair
+.csv>`_
+
+如果你以已经Bonded的key启动节点，那么你的节点就可以部署合约并且出块。如果你使用未bonded的key启动节点，那么你的节点就只是一个只读节点，只能接收别人出的块。
+你还可以使用自己生成的key。
+
+
+节点操作主意事项
+*******************
+
+连接bootstrap节点:
+-------------------
+    如果你使用二进制包
+
+        ``$ ./bin/rnode run -b <bootstrap地址> --validator-public-key <你的公钥>``
+
+    如果你使用docker
+
+        ``$ docker run --net host rchain/rnode:master run -b <bootstrap地址> --validator-public-key <你的公钥>``
+
+部署合约
+------------------
+
+如果你使用的是 `bonded的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8
+/bonded_key_pairs.csv>`_ ,那么你在连接好bootstrap节点之后就可以部署合约到自己的机子并且出块。
+具体操作如下：
+
+1. ``$ ./bin/rnode deploy --phlo-limit 100000000  --phlo-price 1 <合约>``
+2. ``$ ./bin/rnode propose``
+
+你可以选择的 `合约 <https://github.com/rchain/rchain/tree/dev/rholang/examples>`_
+
+判定运行rnode版本
+-----------------
+
+.. _判定运行rnode版本:
+
+当你运行rnode时候，开始展示的日志如下：（加粗部分为版本号）
+
+        12:23:08.881 [main] INFO  c.r.n.configuration.Configuration$ - Using configuration file:/s/s.rnode/rnode.toml
+        12:23:08.905 [main] WARN  c.r.n.configuration.Configuration$ - Configuration file/s/s.rnode/rnode.toml not found
+        12:23:08.997 [main] INFO  c.r.n.configuration.Configuration$ - Starting with profile default
+        12:23:09.504 [main] INFO  coop.rchain.node.Main$ - RChain Node 0.8.3(**7ec0abc6d291182c55e3f9639a0b864878e4728f**)
+        12:23:09.515 [main] INFO  coop.rchain.node.NodeEnvironment$ - Using data dir:/s/s.rnode
+        12:23:09.557 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - No certificate found at path/s/s.rnode/node.certificate.pem
+        12:23:09.558 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - Generating a X.509 certificate for the node
+        12:23:09.562 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - Generating a PEM secret key for the node
