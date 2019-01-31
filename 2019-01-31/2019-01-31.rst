@@ -35,7 +35,7 @@ Rnode 版本
 
 bootstrap节点地址
 *****************
-    rnode://c98ec3cc05e023ac06186b2dcdde16193fbc6a2a@183.45.155.243?protocol=40400&discovery=40404
+    rnode://4e9439937a09d0d5cbc6ba7b6f874af2b9f37bd8@183.45.152.147?protocol=40400&discovery=40404
 
 选择你的私钥和公钥
 ************************
