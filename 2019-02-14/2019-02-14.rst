@@ -124,11 +124,11 @@ bootstrap节点地址
 -------------------
     如果你使用二进制包
 
-        ``$ rnode run -b <bootstrap地址> --validator-public-key <你的公钥>``
+        ``$ rnode run -b <bootstrap地址> --validator-public-key <你的公钥> --validator-private-key <你的私钥>``
 
     如果你使用docker
 
-        ``$ docker run --net host rchain/rnode:master run -b <bootstrap地址> --validator-public-key <你的公钥>``
+        ``$ docker run --net host rchain/rnode:master run -b <bootstrap地址> --validator-public-key <你的公钥> --validator-private-key <你的私钥>``
 
 部署合约
 ------------------
