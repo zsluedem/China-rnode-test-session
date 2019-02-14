@@ -123,7 +123,7 @@ bootstrap节点地址
 -------------------
     如果你使用二进制包
 
-        ``$ ./bin/rnode run -b <bootstrap地址> --validator-public-key <你的公钥>``
+        ``$ rnode run -b <bootstrap地址> --validator-public-key <你的公钥>``
 
     如果你使用docker
 
@@ -136,8 +136,8 @@ bootstrap节点地址
 /bonded_key_pairs.csv>`_ ,那么你在连接好bootstrap节点之后就可以部署合约到自己的机子并且出块。
 具体操作如下：
 
-1. ``$ ./bin/rnode deploy --from=0x1 --nonce=0 --phlo-limit=100000000  --phlo-price=1 <合约>``
-2. ``$ ./bin/rnode propose``
+1. ``$ rnode deploy --from=0x1 --nonce=0 --phlo-limit=100000000  --phlo-price=1 <合约>``
+2. ``$ rnode propose``
 
 你可以选择的 `合约 <https://github.com/rchain/rchain/tree/dev/rholang/examples>`_
 
