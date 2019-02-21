@@ -119,10 +119,10 @@ bootstrap节点地址
 `已经bonded 的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8
 /bonded_key_pairs.csv>`_
 
+.. _连接bootstrap节点:
+
 连接bootstrap节点
 -------------------
-
-.. _连接bootstrap节点:
 
     ``$ rnode run -b <bootstrap地址> --validator-public-key <你的公钥> --validator-private-key <你的私钥>``
 
