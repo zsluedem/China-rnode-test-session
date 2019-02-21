@@ -91,7 +91,7 @@ Rnode 版本
 bootstrap节点地址
 ==================
 
-    bootstrap节点地址将在测试当晚公布
+    "rnode://75411d43afea707f2a902428173003f2d9f8eaaa@157.230.240.95?protocol=40400&discovery=40404"
 
 测试内容
 =========
@@ -179,9 +179,9 @@ bootstrap节点地址
 
 生成部署合约之后要把合约部署在验证节点上并让验证节点出块（注意，此时你的节点并不是验证节点，你需要把合约部署在别人的节点上）
 
-    $ rnode --grpc-host <其它验证节点ip> deploy --phlo-limit 10000000000 --phlo-price 1 <forward_合约>
+    $ rnode --grpc-host 157.230.240.95 deploy --phlo-limit 10000000000 --phlo-price 1 <forward_合约>
 
-    $ rnode --grpc-host <其它验证节点ip> deploy --phlo-limit 10000000000 --phlo-price 1 <bond_合约>
+    $ rnode --grpc-host 157.230.240.95 deploy --phlo-limit 10000000000 --phlo-price 1 <bond_合约>
 
 然后等待验证节点出块。如果出块成功则并且你的公钥出现在最新出块的验证节点上，证明绑定成功。
 
