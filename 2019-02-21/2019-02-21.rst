@@ -27,7 +27,7 @@ ssh root@你的服务器ip
 
 .. code-block::
 
-    $ wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/install.sh
+    $ wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/2019-02-21/install.sh
 
 然后会出现以下日志（可能某些日期会有出入）
 
