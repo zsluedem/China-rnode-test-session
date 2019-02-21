@@ -104,10 +104,6 @@ bootstrap节点地址
 2. 使用 `未bonded的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/unbonded_key_pair
 .csv>`_ 连接 bootstrap 节点（此时节点为可读节点，不可出块）， 将自己的节点升级为验证节点，并且出块。
 
-1. 启动节点，连接到bootstrap节点
-2. 观察节点日志，并且接受区块，展示区块
-3. 验证节点可以自己部署合约并且出块
-
 1.使用bonded的key测试
 =========================
 
