@@ -67,14 +67,14 @@ ssh root@你的服务器ip
 
 .. code-block::
 
-    RChain Node 0.8.3
+    RChain Node 0.8.4.git550be610
 
 Rnode 版本
 ===========
 
 测试通过zoom 参加：https://zoom.us/j/8526821974
 
-今天版本 RChain Node 0.8.3 (**57ae9723f67fc16824c56942545808672cfb8c6c**) **版本必须一致** 判定运行rnode版本_
+今天版本 RChain Node 0.8.4.git550be610 (**550be610fb6ed70212782572284e71b49d209c8d**) **版本必须一致** 判定运行rnode版本_
 
 你可以选择二进制文件运行或者docker镜像运行
 
@@ -92,7 +92,7 @@ Rnode 版本
 bootstrap节点地址
 ==================
 
-    "rnode://84590c8d1f84cd11afdaec64bad0411d354891f7@134.209.104.78?protocol=40400&discovery=40404"
+    晚上确定，暂时未公布
 
 测试内容
 =========
