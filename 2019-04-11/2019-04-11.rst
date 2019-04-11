@@ -23,7 +23,7 @@ ETH: 0xA39a575fE33D14E3DdA27303b4Bf239047376cf4
 
 BTC: 12VqnXgGiFz1DStQBsJYsfSm95ehBCiUnJ
 
-自动安装脚本（仅适用于Ubuntu18系统）
+自动安装脚本（适用于Ubuntu14, Ubuntu16, Ubuntu18系统）
 ============================================
 
 使用方法：
@@ -51,8 +51,28 @@ ssh root@你的服务器ip
 
     2019-02-14 05:43:06 (26.3 MB/s) - ‘install.sh’ saved [233/233]
 
+    xxxxxxxxxxxx
+    xxxxxxxxxxxx
+    xxxxxxxxxxxx
+    (以上xxx代表很多很多很多日志)
 
-然后会弹出一大段很长的日志，很长就不贴出来了。正常运行完了就安装完毕了。
+**注意**
+
+然后会弹出一大段很长的日志，然后会进入一个安装Jdk11的 画面如下：
+
+.. image:: img/WX20190411-101202.png
+    :target: img/WX20190411-101202.png
+
+选择OK，这里使用键盘Tab键(Q键隔壁那个)移动光标
+
+然后再进入以下画面
+
+.. image:: img/WX20190411-101323.png
+    :target: img/WX20190411-101323.png
+
+继续使用Tab选择yes, 然后enter
+
+然后继续一大段日志，等待安装完成
 
 检验安装是否成功
 ----------------
