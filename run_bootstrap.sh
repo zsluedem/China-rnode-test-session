@@ -7,4 +7,5 @@ rnode run -s \
 --validator-private-key 901b1f0837b7e891d7c2ea0047f502fd95637e450b0226c39a97d68dd951c8a7 \
 --validator-public-key 00322ba649cebf90d8bd0eeb0658ea7957bcc59ecee0676c86f4fec517c06251 \
 --bonds-file bonds.txt \
---has-faucet
+--has-faucet \
+--duration 30seconds
