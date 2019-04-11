@@ -1,0 +1,211 @@
+=====================
+2019-04-11 测试介绍
+=====================
+
+安装指南
+===========
+
+建议使用 `DigitalOcean <https://m.do.co/c/76db83b92fdd>`_ , `Vultr <https://www.vultr.com/?ref=7866920>`_ 或者
+`GigiCloud <https://clientarea.gigsgigscloud.com/?affid=2031>`_ 等云服务器。
+(Vultr亚洲服务器经常被墙，不稳定。DigitalOcean和Vultr支持按小时收费，Gigicloud只能按月收费，请根据自身情况选择)
+
+建议使用8G内存以上的电脑，最好位置选在亚洲。
+
+如果你使用本地mac或者windows请确保你家网络支持upnp并且具有公网地址。
+
+如果你想使用下面的自动安装脚本，请选择Ubuntu18的系统
+
+捐献地址
+==========
+如果各位看官觉得做得不错的话，就打赏一下呗，你的支持是我继续下去的动力！
+
+ETH: 0xA39a575fE33D14E3DdA27303b4Bf239047376cf4
+
+BTC: 12VqnXgGiFz1DStQBsJYsfSm95ehBCiUnJ
+
+自动安装脚本（仅适用于Ubuntu18系统）
+============================================
+
+使用方法：
+
+ssh root@你的服务器ip
+
+输入命令（复制下面"$" 以后的字符，直接黏贴到命令行，然后按输入）
+
+.. code-block::
+
+    $ sh -c "$(wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/2019-04-11/install.sh -O -)"
+
+然后会出现以下日志（可能某些日期会有出入）
+
+.. code-block::
+
+    --2019-02-14 05:43:05--  https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/2019-04-11/install.sh
+    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.8.133
+    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.8.133|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 233 [text/plain]
+    Saving to: ‘install.sh’
+
+    install.sh                                100%[====================================================================================>]     233  --.-KB/s    in 0s
+
+    2019-02-14 05:43:06 (26.3 MB/s) - ‘install.sh’ saved [233/233]
+
+
+然后会弹出一大段很长的日志，很长就不贴出来了。正常运行完了就安装完毕了。
+
+检验安装是否成功
+----------------
+
+命令行输入:
+
+.. code-block::
+
+    $ rnode --version
+
+如果输出以下即安装成功，你可以使用rnode进行操作了
+
+.. code-block::
+
+    RChain Node 0.8.4.git550be610
+
+Rnode 版本
+===========
+
+测试通过zoom 参加：https://zoom.us/j/8526821974
+
+今天版本 RChain Node 0.8.4.git550be610 (**550be610fb6ed70212782572284e71b49d209c8d**) **版本必须一致** 判定运行rnode版本_
+
+你可以选择二进制文件运行或者docker镜像运行
+
+* 二进制文件下载地址: https://github.com/zsluedem/China-rnode-test-session/raw/master/2019-02-21/rnode-0.8.3.git7203833c.tgz
+
+* docker 镜像:（**本次测试无docker版本，请选用二进制文件**）
+
+    rchain/rnode:master
+
+`中文版Rnode使用说明下载 <https://github.com/zsluedem/China-rnode-test-session/raw/master/RChain%E8%8A%82%E7%82%B9%E6%B5%8B%E8%AF
+%95%E6%8C%87%E5%AF%BC.pdf>`_ (说明有一部分已经过期，但是仍然有一定参考价值，技术人员可以看一下)
+
+`英文版Rnode使用说明 <https://rchain.atlassian.net/wiki/spaces/CORE/pages/428376065/User+guide+for+running+RNode>`_
+
+bootstrap节点地址
+==================
+
+    "rnode://ece9c178cc94bea9690484141de49bab8e813a39@178.128.23.86?protocol=40400&discovery=40404"
+
+测试内容
+=========
+
+本次测试提供两个测试内容，你可以根据自身对node的熟悉情况进行选择。(推荐初学者先尝试第一种方式)
+
+1. 使用 `已经bonded 的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8
+/bonded_key_pairs.csv>`_ 连接 bootstrap 节点，自己部署合约并且出块。
+
+2. 使用 `未bonded的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/unbonded_key_pair
+.csv>`_ 连接 bootstrap 节点（此时节点为可读节点，不可出块）， 将自己的节点升级为验证节点，并且出块。
+
+1.使用bonded的key测试
+=========================
+
+选择你的私钥和公钥
+-------------------
+
+请在下面文件随便选择一个私钥和公钥作为自己的key(左边私钥，右边公钥)
+
+`已经bonded 的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8
+/bonded_key_pairs.csv>`_
+
+.. _连接bootstrap节点:
+
+连接bootstrap节点
+-------------------
+
+    ``$ rnode run -b <bootstrap地址> --validator-public-key <你的公钥> --validator-private-key <你的私钥>``
+
+
+将以上<>内容换成你的参数，比如说， 如果:
+
+* ``<bootstrap地址>`` 是 ``"rnode://1efa82b543db29d84e936a57d7b5b53b11818498@206.189.155.255?protocol=40400&discovery=40404"``,
+* ``<你的公钥>`` 是 ``16dc6cf7becdf919dfa2ff3fb6a1a435d8102a7db3127a0b9d2376dd2bbf8ffb``
+* ``<你的私钥>`` 是 ``774149895133833120a34bab83927e34f03f32ed22949f48209de9335953d6c4``
+
+
+则命令行为：
+
+    ``rnode run -b "rnode://1efa82b543db29d84e936a57d7b5b53b11818498@206.189.155.255?protocol=40400&discovery=40404" --validator-public-key 16dc6cf7becdf919dfa2ff3fb6a1a435d8102a7db3127a0b9d2376dd2bbf8ffb --validator-private-key 774149895133833120a34bab83927e34f03f32ed22949f48209de9335953d6c4``
+
+部署合约并出块
+------------------
+
+如果你使用的是 `bonded的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8
+/bonded_key_pairs.csv>`_ ,那么你在连接好bootstrap节点之后就可以部署合约到自己的机子并且出块。
+具体操作如下：
+
+1. ``$ rnode deploy --from=0x1 --nonce=0 --phlo-limit=100000000  --phlo-price=1 <合约>``
+2. ``$ rnode propose``
+
+你可以选择的 `合约 <https://github.com/rchain/rchain/tree/dev/rholang/examples>`_
+
+
+2.使用未bonded的key测试
+=========================
+
+请在下面文件随便选择一个私钥和公钥作为自己的key(左边私钥，右边公钥)
+
+`未bonded的key <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/unbonded_key_pair
+.csv>`_
+
+连接bootstrap节点
+-------------------
+同上 第一种测试方式 连接bootstrap节点_
+
+
+生成绑定合约
+--------------
+
+可读节点升级为验证节点需要部署两个合约---  bond_xxxx.rho 和 forward_xxxx.rho
+
+这两个合约可以用一下命令生成:
+
+    $ rnode generateFaucetBondingDeploys --amount <抵押数量> --private-key <你的私钥> --public-key <你的公钥> -s ed25519
+
+此时当前目录生成两个文件
+
+* bond_<你的公钥>.rho
+* forward_<你的公钥>.rho
+
+部署绑定合约
+---------------
+
+生成部署合约之后要把合约部署在验证节点上并让验证节点出块（注意，此时你的节点并不是验证节点，你需要把合约部署在别人的节点上）
+
+    $ rnode --grpc-host 157.230.240.95 deploy --phlo-limit 10000000000 --phlo-price 1 <forward_合约>
+
+    $ rnode --grpc-host 157.230.240.95 deploy --phlo-limit 10000000000 --phlo-price 1 <bond_合约>
+
+然后等待验证节点出块。如果出块成功则并且你的公钥出现在最新出块的验证节点上，证明绑定成功。
+
+
+查看区块链的出块dag
+======================
+
+**注意**： 验证节点和可读节点均可进行一下操作
+
+具体请点击连接：https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/dag%E6%9F%A5%E7%9C%8B/readme.rst
+
+判定运行rnode版本
+==================
+
+.. _判定运行rnode版本:
+
+当你运行rnode时候，开始展示的日志如下：（加粗部分为版本号）
+
+        12:23:08.881 [main] INFO  c.r.n.configuration.Configuration$ - Using configuration file:/s/s.rnode/rnode.toml
+        12:23:08.905 [main] WARN  c.r.n.configuration.Configuration$ - Configuration file/s/s.rnode/rnode.toml not found
+        12:23:08.997 [main] INFO  c.r.n.configuration.Configuration$ - Starting with profile default
+        12:23:09.504 [main] INFO  coop.rchain.node.Main$ - RChain Node 0.8.3.git57ae9723(**57ae9723f67fc16824c56942545808672cfb8c6c**)
+        12:23:09.515 [main] INFO  coop.rchain.node.NodeEnvironment$ - Using data dir:/s/s.rnode
+        12:23:09.557 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - No certificate found at path/s/s.rnode/node.certificate.pem
+        12:23:09.558 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - Generating a X.509 certificate for the node
+        12:23:09.562 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - Generating a PEM secret key for the node
