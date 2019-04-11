@@ -66,7 +66,7 @@ ssh root@你的服务器ip
 
 然后再进入以下画面
 
-.. image:: https://github.com/zsluedem/China-rnode-test-session/blob/master/img/WX20190411-101202.png
+.. image:: https://github.com/zsluedem/China-rnode-test-session/blob/master/img/WX20190411-101323.png
 
 继续使用Tab选择yes, 然后enter
 
