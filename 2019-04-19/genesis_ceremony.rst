@@ -41,7 +41,8 @@ rchain主网的创世块中。
 
 这里测试请选用https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/bonded_key_pairs.csv 中的私钥和公钥。
 
-`时间戳` 由bootstrap指定，测试的时候请咨询，每次都可能不一样
-`需要签名数` 也由bootstrap指定，测试的时候请咨询
+``时间戳`` 由bootstrap指定，测试的时候请咨询，每次都可能不一样
 
-如果以上`时间戳`和`需要签名数` 与bootstrap节点一样，可能你的节点无法生成验证。
+``需要签名数`` 也由bootstrap指定，测试的时候请咨询
+
+如果以上``时间戳``和``需要签名数`` 与bootstrap节点一样，可能你的节点无法生成验证。

@@ -111,15 +111,7 @@ bootstrap节点地址
 测试内容
 =========
 
-1. 部署合约现在需要--private-key 参数指代部署的用户
-
-最近的版本更新有一个很重要的特点就是在部署合约的时候需要指定--private-key参数来代表部署合约的人。
-
-.. code-block:: console
-
-    rnode deploy --phlo-limit=100000000  --phlo-price=1 --private-key <部署人的私钥> <合约>``
-
-    $ rnode deploy --phlo-limit=100000000  --phlo-price=1 --private-key 19d1d36888aad7d2372b32ba45ec7ce11eb0fcf65c3b055682772177639eec89 tut-hello.rho
+1. 这次想测试genesis ceremony（创世块启动仪式）,详细请看https://github.com/zsluedem/China-rnode-test-session/blob/master/2019-04-19/genesis_ceremony.rst
 
 其他内容
 ==========
@@ -127,18 +119,3 @@ bootstrap节点地址
 2. `查看区块链出块的dag <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/dag%E6%9F%A5%E7%9C%8B/readme.rst>`_
 3. `使节点成为validator <https://github.com/zsluedem/China-rnode-test-session/blob/master/2019-03-08/2019-03-08.rst#2%E4%BD%BF%E7%94%A8%E6%9C%AAbonded%E7%9A%84key%E6%B5%8B%E8%AF%95>`_
 
-判定运行rnode版本
-==================
-
-.. _判定运行rnode版本:
-
-当你运行rnode时候，开始展示的日志如下：（加粗部分为版本号）
-
-        12:23:08.881 [main] INFO  c.r.n.configuration.Configuration$ - Using configuration file:/s/s.rnode/rnode.toml
-        12:23:08.905 [main] WARN  c.r.n.configuration.Configuration$ - Configuration file/s/s.rnode/rnode.toml not found
-        12:23:08.997 [main] INFO  c.r.n.configuration.Configuration$ - Starting with profile default
-        12:23:09.504 [main] INFO  coop.rchain.node.Main$ - RChain Node 0.8.3.git57ae9723(**57ae9723f67fc16824c56942545808672cfb8c6c**)
-        12:23:09.515 [main] INFO  coop.rchain.node.NodeEnvironment$ - Using data dir:/s/s.rnode
-        12:23:09.557 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - No certificate found at path/s/s.rnode/node.certificate.pem
-        12:23:09.558 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - Generating a X.509 certificate for the node
-        12:23:09.562 [main] INFO  c.r.c.t.GenerateCertificateIfAbsent - Generating a PEM secret key for the node
