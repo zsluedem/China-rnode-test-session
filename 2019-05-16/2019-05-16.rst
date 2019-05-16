@@ -115,9 +115,9 @@ bootstrap节点地址
 
 其他内容
 ==========
-1. `连接bootstrap节点 <https://github.com/zsluedem/China-rnode-test-session/blob/master/2019-03-08/2019-03-08.rst#%E8%BF%9E%E6%8E%A5bootstrap%E8%8A%82%E7%82%B9>`_
+1. `连接bootstrap节点 <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/general.rst#%E8%BF%9E%E6%8E%A5bootstrap%E8%8A%82%E7%82%B9>`_
 2. `查看区块链出块的dag <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/dag%E6%9F%A5%E7%9C%8B/readme.rst>`_
-3. `使节点成为validator <https://github.com/zsluedem/China-rnode-test-session/blob/master/2019-03-08/2019-03-08.rst#2%E4%BD%BF%E7%94%A8%E6%9C%AAbonded%E7%9A%84key%E6%B5%8B%E8%AF%95>`_
+3. `使节点成为validator <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/general.rst#%E7%BB%91%E5%AE%9A%E6%88%90%E4%B8%BA%E9%AA%8C%E8%AF%81%E8%8A%82%E7%82%B9%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E5%B7%B2%E8%BF%87%E6%9C%9F%E6%96%B0%E7%9A%84bonding-%E7%A8%8B%E5%BA%8F%E6%AD%A3%E5%9C%A8%E5%BC%80%E5%8F%91>`_
 
 
 参加人员
