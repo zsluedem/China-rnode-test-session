@@ -1,0 +1,124 @@
+=====================
+2019-05-16 测试介绍
+=====================
+
+安装指南
+===========
+
+建议使用 `DigitalOcean <https://m.do.co/c/76db83b92fdd>`_ , `Vultr <https://www.vultr.com/?ref=7866920>`_ 或者
+`GigiCloud <https://clientarea.gigsgigscloud.com/?affid=2031>`_ 等云服务器。
+(Vultr亚洲服务器经常被墙，不稳定。DigitalOcean和Vultr支持按小时收费，Gigicloud只能按月收费，请根据自身情况选择)
+
+建议使用8G内存以上的电脑，最好位置选在亚洲。
+
+如果你使用本地mac或者windows请确保你家网络支持upnp并且具有公网地址。
+
+如果你想使用下面的自动安装脚本，请选择Ubuntu18的系统
+
+捐献地址
+==========
+如果各位看官觉得做得不错的话，就打赏一下呗，你的支持是我继续下去的动力！
+
+ETH: 0xA39a575fE33D14E3DdA27303b4Bf239047376cf4
+
+BTC: 12VqnXgGiFz1DStQBsJYsfSm95ehBCiUnJ
+
+自动安装脚本（适用于Ubuntu14, Ubuntu16, Ubuntu18系统）
+============================================
+
+使用方法：
+
+ssh root@你的服务器ip
+
+输入命令（复制下面"$" 以后的字符，直接黏贴到命令行，然后按输入）
+
+.. code-block::
+
+    $ sh -c "$(wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/2019-05-16/install.sh -O -)"
+
+然后会出现以下日志（可能某些日期会有出入）
+
+.. code-block::
+
+    --2019-02-14 05:43:05--  https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/2019-04-19/install.sh
+    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.8.133
+    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.8.133|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 233 [text/plain]
+    Saving to: ‘install.sh’
+
+    install.sh                                100%[====================================================================================>]     233  --.-KB/s    in 0s
+
+    2019-02-14 05:43:06 (26.3 MB/s) - ‘install.sh’ saved [233/233]
+
+    xxxxxxxxxxxx
+    xxxxxxxxxxxx
+    xxxxxxxxxxxx
+    (以上xxx代表很多很多很多日志)
+
+**注意**
+
+然后会弹出一大段很长的日志，然后会进入一个安装Jdk11的 画面如下：
+
+.. image:: https://github.com/zsluedem/China-rnode-test-session/blob/master/img/WX20190411-101202.png
+
+选择OK，这里使用键盘Tab键(Q键隔壁那个)移动光标
+
+然后再进入以下画面
+
+.. image:: https://github.com/zsluedem/China-rnode-test-session/blob/master/img/WX20190411-101323.png
+
+继续使用Tab选择yes, 然后enter
+
+然后继续一大段日志，等待安装完成
+
+检验安装是否成功
+----------------
+
+命令行输入:
+
+.. code-block::
+
+    $ rnode --version
+
+如果输出以下即安装成功，你可以使用rnode进行操作了
+
+.. code-block::
+
+    RChain Node 0.9.4.git19cd019e
+
+Rnode 版本
+===========
+
+测试通过zoom 参加：https://zoom.us/j/8526821974
+
+今天版本 RChain Node 0.9.4.git19cd019e (**19cd019ec8f27da661283929958fa74c7cb52342**) **版本必须一致** 判定运行rnode版本_
+
+你可以选择二进制文件运行或者docker镜像运行
+
+* 二进制文件下载地址: https://github.com/rchain/rchain/releases/download/v0.9.4/rnode-0.9.4.git19cd019e.tgz
+
+`中文版Rnode使用说明下载 <https://github.com/zsluedem/China-rnode-test-session/raw/master/RChain%E8%8A%82%E7%82%B9%E6%B5%8B%E8%AF
+%95%E6%8C%87%E5%AF%BC.pdf>`_ (说明有一部分已经过期，但是仍然有一定参考价值，技术人员可以看一下)
+
+`英文版Rnode使用说明 <https://rchain.atlassian.net/wiki/spaces/CORE/pages/428376065/User+guide+for+running+RNode>`_
+
+bootstrap节点地址
+==================
+
+    测试时候公布
+
+测试内容
+=========
+
+1. 这次想测试genesis ceremony（创世块启动仪式）,详细请看https://github.com/zsluedem/China-rnode-test-session/blob/master/通用/genesis_ceremony.rst
+
+其他内容
+==========
+1. `连接bootstrap节点 <https://github.com/zsluedem/China-rnode-test-session/blob/master/2019-03-08/2019-03-08.rst#%E8%BF%9E%E6%8E%A5bootstrap%E8%8A%82%E7%82%B9>`_
+2. `查看区块链出块的dag <https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/dag%E6%9F%A5%E7%9C%8B/readme.rst>`_
+3. `使节点成为validator <https://github.com/zsluedem/China-rnode-test-session/blob/master/2019-03-08/2019-03-08.rst#2%E4%BD%BF%E7%94%A8%E6%9C%AAbonded%E7%9A%84key%E6%B5%8B%E8%AF%95>`_
+
+
+参加人员
+========
