@@ -35,18 +35,21 @@ ssh root@你的服务器ip
     xxxxxxxxxxxx
     (以上xxx代表很多很多很多日志)
 
-**注意**
+验证安装是否成功
 
-然后会弹出一大段很长的日志，然后会进入一个安装Jdk11的 画面如下：
+.. code-block::
+    root@ubuntu-s-6vcpu-16gb-sgp1-01:~# rnode                                                                                                             [182/182]
+    RChain Node 0.9.12.git16d90f43
+      -c, --config-file  <arg>             Path to the configuration file.
+          --grpc-host  <arg>               Hostname or IP of node on which gRPC
+                                           service is running.
+          --grpc-max-message-size  <arg>   Maximum size of message that can be sent
+                                           via gRPC API
+      -g, --grpc-port  <arg>               Port used for external gRPC API. Defaults                                                                                                                      to 40401
+          --grpc-port-internal  <arg>      Port used for internal gRPC API. Defaults
+                                           to 40402
+      -p, --profile  <arg>                 Which predefined set of defaults to use:
+                                           default or docker.
+      -h, --help                           Show help message
+      -v, --version                        Show version of this program
 
-.. image:: https://github.com/zsluedem/China-rnode-test-session/blob/master/img/WX20190411-101202.png
-
-选择OK，这里使用键盘Tab键(Q键隔壁那个)移动光标
-
-然后再进入以下画面
-
-.. image:: https://github.com/zsluedem/China-rnode-test-session/blob/master/img/WX20190411-101323.png
-
-继续使用Tab选择yes, 然后enter
-
-然后继续一大段日志，等待安装完成

@@ -35,7 +35,7 @@ rchain主网的创世块中。
 
 .. code-block:: console
 
-    $ rnode run -b <bootstrap地址> --validator-public-key <你的公钥> --validator-private-key <你的私钥> --deploy-timestamp <时间戳> --required-sigs <需要签名数> --bonds-file <bonds路径>
+    $ rnode run -b "<bootstrap地址>" --validator-public-key <你的公钥> --validator-private-key <你的私钥> --deploy-timestamp 1 --required-sigs 5 --bonds-file <bonds路径> --wallets-file <wallets路径>
 
 注意，这里选择的公钥和私钥必须是bond.txt中的私钥公钥才可以。
 
