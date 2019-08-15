@@ -56,4 +56,8 @@ ssh root@你的服务器ip
     下面还有一大段东西省略
 
 
+    确定你含有bonds.txt和wallets.txt文件以参加这次测试
     root@ubuntu-s-6vcpu-16gb-sgp1-01:~# ls
+    bonds.txt  rnode-0.9.12.git16d90f43  rnode-0.9.12.git16d90f43.tgz  wallets.txt
+
+安装完成后，请参照https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/genesis_ceremony.rst
