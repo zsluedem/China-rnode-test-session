@@ -8,3 +8,5 @@ sudo apt-get install -y openjdk-11-jdk
 wget https://github.com/rchain/rchain/releases/download/v0.9.12/rnode-0.9.12.git16d90f43.tgz
 tar zxvf rnode-0.9.12.git16d90f43.tgz
 ln -s $(pwd)/rnode-0.9.12.git16d90f43/bin/rnode /usr/local/bin/rnode
+wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/%E9%80%9A%E7%94%A8/bonds.txt
+wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/%E9%80%9A%E7%94%A8/wallets.txt

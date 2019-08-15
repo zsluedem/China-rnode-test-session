@@ -53,3 +53,7 @@ ssh root@你的服务器ip
       -h, --help                           Show help message
       -v, --version                        Show version of this program
 
+    下面还有一大段东西省略
+
+
+    root@ubuntu-s-6vcpu-16gb-sgp1-01:~# ls
