@@ -35,11 +35,11 @@ rchain主网的创世块中。
 
 .. code-block:: console
 
-    $ rnode run -b "<bootstrap地址>" --validator-public-key <你的公钥> --validator-private-key <你的私钥> --deploy-timestamp 1 --required-sigs 5 --bonds-file <bonds路径> --wallets-file <wallets路径>
+    $ rnode run -b "<bootstrap地址>" --validator-public-key <你的公钥> --validator-private-key <你的私钥> --deploy-timestamp 1 --required-sigs 5 --bonds-file <bonds路径> --wallets-file <wallets路径> --genesis-validator
 
 注意，这里选择的公钥和私钥必须是bond.txt中的私钥公钥才可以。
 
-这里测试请选用https://github.com/zsluedem/China-rnode-test-session/blob/master/%E9%80%9A%E7%94%A8/bonded_key_pairs.csv 中的私钥和公钥。
+这里测试请选用https://docs.qq.com/sheet/DV3JmeXFuamdlTldT?opendocxfrom=admin&tab=BB08J2&coord=A3A0A0 中的私钥和公钥。
 
 ``时间戳`` 由bootstrap指定，测试的时候请咨询，每次都可能不一样
 

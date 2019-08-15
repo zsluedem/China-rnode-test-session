@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-rnode run -b "rnode://4150044ccd369bc77d5de74608dd6eab66c52318@157.230.121.115?protocol=40400&discovery=40404" \
---validator-public-key 12a764e25517b99c35db937115f480a5067f6a809dd0c1f382ad2a9212a012c3 \
---validator-private-key b2527b00340a83e302beae2a8daf6d654e8e57541acfa261cc1b5635eb16aa15 \
+rnode run -b "rnode://df2bcd65d72c43557edbf33e998ececb520573e1@165.22.192.147?protocol=40400&discovery=40404" \
+--validator-public-key 04a1f613710e2a4ac7a5fefa3c74ad97cbff42aefaed083d6134b913dba3e84857e698a88c23b0ae37668726a2e96c82cc724434ea165a7d0fd9d7cab71d5a8065 \
+--validator-private-key 61e594124ca6af84a5468d98b34a4f3431ef39c54c6cf07fe6fbf8b079ef64f6 \
+--genesis-validator \
+--bonds-file bonds.txt \
+--wallets-file wallets.txt \
 --deploy-timestamp 1 \
---required-sigs 5
+--required-sigs 0
