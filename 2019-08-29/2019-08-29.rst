@@ -15,14 +15,22 @@ ssh root@你的服务器ip
 
     1. $ sh -c "$(wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/2019-08-29/install.sh -O -)"
 
+        一堆日志
+        等待安装完成
+
     2. $ exec "$SHELL"
 
     3. $ pyenv install 3.7.3
+
+        一堆日志
+        等待安装完成
 
     4. $ pyenv global 3.7.3
 
     5. $ sh -c "$(wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/2019-08-29/install_lib.sh -O -)"
 
+        一堆日志
+        等待安装完成
 
 然后会出现以下日志（可能某些日期会有出入）
 
