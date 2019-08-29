@@ -43,7 +43,7 @@ def run_cli(args: argparse.Namespace):
     elif args.subcommand == "check-balance":
         check_balance(args.private_key, args.grpc_host, args.grpc_port)
     elif args.subcommand == "transfer":
-        transfer()
+        transfer(args.to_addr, args.amount,args.private_key, args.grpc_host, args.gprc_port )
     else:
         raise NotImplementedError()
 
@@ -64,6 +64,7 @@ if __name__ == '__main__':
     transfer_parser = subparsers.add_parser("transfer", help="transfer fund command")
     transfer_parser.add_argument("--to-addr")
     transfer_parser.add_argument("--amount")
+    transfer_parser.add_argument("--private-key")
 
     args = parser.parse_args()
     run_cli(args)
