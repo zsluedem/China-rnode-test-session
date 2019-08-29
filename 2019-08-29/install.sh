@@ -16,7 +16,7 @@ curl https://pyenv.run | bash
 echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-exec "$SHELL"
+source ~/.bashrc
 
 pyenv install 3.7.3
 pyenv shell 3.7.3
