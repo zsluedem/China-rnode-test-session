@@ -15,10 +15,5 @@ curl https://pyenv.run | bash
 echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-. ~/.bashrc
-pyenv install 3.7.3
-pyenv global 3.7.3
-pyenv shell 3.7.3
-pip3 install --upgrade setuptools
-pip3 install git+https://github.com/rchain/pyrchain@0075df7c9b70238056ba52f1505b575d2844e1fc
-wget https://raw.githubusercontent.com/zsluedem/China-rnode-test-session/master/2019-08-29/cli.py
+
+
