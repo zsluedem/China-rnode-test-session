@@ -16,6 +16,8 @@ def bond(amount, private_key, grpc_host, grpc_port):
         alice_vault_api = VaultAPI(client, key)
         alice_vault_api.bond(amount=amount)
 
+        print("Bonding process is done. Use check balance to ensure bonding is available.")
+
 def check_balance(private_key, grpc_host, grpc_port):
     key = PrivateKey.from_hex(private_key)
     with grpc.insecure_channel('{}:{}'.format(grpc_host, grpc_port)) as channel:
@@ -29,8 +31,11 @@ def transfer(to_addr, amount, private_key, grpc_host, grpc_port):
     key = PrivateKey.from_hex(private_key)
     with grpc.insecure_channel('{}:{}'.format(grpc_host, grpc_port)) as channel:
         client = RClient(channel)
-        pass
+        vault_api = VaultAPI(client, key)
 
+        vault_api.transfer(None, to_addr, amount)
+
+        print("Transfer process is done. Use check balance to ensure transfer is available.")
 
 def run_cli(args: argparse.Namespace):
     if args.subcommand == "bond":
