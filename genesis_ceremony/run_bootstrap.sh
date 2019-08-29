@@ -9,6 +9,4 @@ rnode run -s \
 --genesis-validator \
 --wallets-file wallets.txt \
 --deploy-timestamp 1 \
---required-sigs 0 \
---duration 1min \
---interval 10sec
+--required-sigs 0
