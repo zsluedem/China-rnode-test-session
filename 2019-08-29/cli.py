@@ -43,7 +43,7 @@ def run_cli(args: argparse.Namespace):
     elif args.subcommand == "check-balance":
         check_balance(args.private_key, args.grpc_host, args.grpc_port)
     elif args.subcommand == "transfer":
-        transfer(args.to_addr, args.amount,args.private_key, args.grpc_host, args.gprc_port )
+        transfer(args.to_addr, args.amount,args.private_key, args.grpc_host, args.grpc_port )
     else:
         raise NotImplementedError()
 
